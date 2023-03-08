@@ -5,6 +5,7 @@
     <meta name="viewport" content="with=device-didth, initial-scale=1.0">
     <title>code tutorials</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <section class="header">
@@ -13,9 +14,10 @@
         <a href="index.html">
           <img src="https://raw.githubusercontent.com/codeengineer2004/codeengineer/main/final%20logo.png" height="75px">
         </a>
-        <div class="navbar">
+        <div class="navbar" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            
+
 
             <li>
               <a href="">HOME</a>
@@ -34,10 +36,23 @@
             </li>
           </ul>
 
+
         </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
 
     </section>
+
+    <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right="0";
+    }
+    function hideMenu(){
+      navLinks.style.right="-200px";
+    }
+
+    </script>
 
   </body>
 </html>
